@@ -13,6 +13,7 @@ const Sidebar = () => {
         <Link to="/admin" className="block py-2 px-4 hover:bg-gray-700 rounded">Dashboard</Link>
         <Link to="/admin/users" className="block py-2 px-4 hover:bg-gray-700 rounded">Users</Link>
         <Link to="/" className="block py-2 px-4 hover:bg-gray-700 rounded text-gray-400">Back to Site</Link>
+        <Link to="/admin/properties" className="block py-2 px-4 hover:bg-gray-700 rounded text-gray-400">Properties</Link>
       </nav>
       <div className="p-4 border-t border-gray-700">
         <button 

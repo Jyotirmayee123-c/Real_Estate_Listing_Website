@@ -16,6 +16,9 @@ import AdminDashboard from './pages/admin/AdminDashboard';
 // Route Guards
 import ProtectedRoute from './route/ProtectedRoute';
 import PublicRoute from './route/PublicRoute';
+import Properties from './pages/public/Properties';
+import Contact from './pages/public/Contact';
+import AdminProperties from './pages/admin/AdminProperties';
 
 function App() {
   return (
@@ -24,6 +27,8 @@ function App() {
       <Route path="/" element={<MainLayout />}>
         <Route index element={<Home />} />
         <Route path="about" element={<About />} />
+        <Route path="properties" element={<Properties />} />
+        <Route path="contact" element={<Contact />} />
         
         {/* Only accessible if NOT logged in */}
         <Route 
@@ -57,6 +62,7 @@ function App() {
       {/* Admin Routes with Admin Layout */}
       <Route path="/admin" element={<AdminLayout />}>
         <Route index element={<AdminDashboard />} />
+        <Route path='properties' element={<AdminProperties />} />
       </Route>
       
       {/* Fallback */}
