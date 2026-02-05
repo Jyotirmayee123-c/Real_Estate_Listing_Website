@@ -19,6 +19,8 @@ import PublicRoute from './route/PublicRoute';
 import Properties from './pages/public/Properties';
 import Contact from './pages/public/Contact';
 import AdminProperties from './pages/admin/AdminProperties';
+import SaveProperties from './pages/user/SaveProperties';
+import ContactAgent from './pages/user/ContactAgent';
 
 function App() {
   return (
@@ -29,42 +31,64 @@ function App() {
         <Route path="about" element={<About />} />
         <Route path="properties" element={<Properties />} />
         <Route path="contact" element={<Contact />} />
-        
+
         {/* Only accessible if NOT logged in */}
-        <Route 
-          path="login" 
+        <Route
+          path="login"
           element={
             <PublicRoute>
               <Login />
             </PublicRoute>
-          } 
+          }
         />
-        <Route 
-          path="register" 
+        <Route
+          path="register"
           element={
             <PublicRoute>
               <Register />
             </PublicRoute>
-          } 
+          }
         />
-        
+
         {/* Only accessible if logged in */}
-        <Route 
-          path="profile" 
+        <Route
+          path="profile"
           element={
             <ProtectedRoute>
               <Profile />
             </ProtectedRoute>
-          } 
+          }
         />
+        <Route
+          path="saveproperties"
+          element={
+            <ProtectedRoute>
+              <SaveProperties />
+            </ProtectedRoute>
+          }
+        />
+
+<Route
+          path="contactagent"
+          element={
+            <ProtectedRoute>
+              <ContactAgent />
+            </ProtectedRoute>
+          }
+        />
+
+
       </Route>
+
+
+
 
       {/* Admin Routes with Admin Layout */}
       <Route path="/admin" element={<AdminLayout />}>
         <Route index element={<AdminDashboard />} />
         <Route path='properties' element={<AdminProperties />} />
       </Route>
-      
+
       {/* Fallback */}
       <Route path="*" element={<Navigate to="/" replace />} />
     </Routes>
