@@ -31,7 +31,7 @@ const Home = () => {
             </Link>
             <Link 
               to="/login" 
-              className="bg-blue-600 text-white border border-white-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-50 transition"
+              className="bg-blue-600 text-white border border-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-50 transition"
             >
               Login
             </Link>
