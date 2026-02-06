@@ -7,10 +7,10 @@ const Home = () => {
   return (
     <div className="text-center py-20">
       <h1 className="text-5xl font-extrabold text-gray-900 mb-6">
-        Build Faster with <span className="text-blue-600">React + Node</span>
+         <span className="text-orange-600">Real Estate Listing </span>Website
       </h1>
-      <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
-        This is a complete full-stack authentication starter template with Role-Based Access Control (RBAC).
+      <p className="text-xl text-black-600 mb-8 max-w-2xl mx-auto">
+        Your One Step Destination for Real Estate Listings
       </p>
       
       <div className="space-x-4">
@@ -31,7 +31,7 @@ const Home = () => {
             </Link>
             <Link 
               to="/login" 
-              className="bg-white text-blue-600 border border-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-50 transition"
+              className="bg-blue-600 text-white border border-white-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-50 transition"
             >
               Login
             </Link>
